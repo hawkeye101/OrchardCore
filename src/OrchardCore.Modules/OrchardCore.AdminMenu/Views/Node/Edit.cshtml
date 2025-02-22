@@ -23,7 +23,8 @@
     </div>
 
     <div class="mb-3">
-        <button class="btn btn-success save" type="submit">@T["Save"]</button>
+        <button class="btn btn-success save" type="submit" name="submit" value="save">@T["Save"]</button>
+        <button class="btn btn-success saveandclose" type="submit" name="submit" value="saveclose">@T["Save & Close"]</button>
 
         <a class="btn btn-danger delete"
            asp-action="Delete"
