@@ -184,7 +184,9 @@
     </div>
 
     <div class="mb-3">
-        <button class="btn btn-primary save" type="submit" name="submit.Save" value="Save">@T["Save"]</button>
+        <input type="hidden" name="submit" id="submit" value="Save" />
+        <button class="btn btn-primary save" type="submit" onmousedown="document.getElementById('submit').value='Save'">@T["Save"]</button>
+        <button class="btn btn-primary save" type="submit" onmousedown="document.getElementById('submit').value='SaveAndClose'">@T["Save & Close"]</button>
 
         @if (contentSettings.IsSystemDefined)
         {
