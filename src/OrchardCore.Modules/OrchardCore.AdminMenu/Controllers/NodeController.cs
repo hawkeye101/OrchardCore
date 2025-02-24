@@ -231,7 +231,9 @@ public sealed class NodeController : Controller
                 return View(model);
             }
             else
+            {
                 return RedirectToAction(nameof(List), new { id = model.AdminMenuId });
+            }
         }
 
         await _notifier.ErrorAsync(H["The admin node has validation errors."]);

@@ -165,10 +165,13 @@ public sealed class AdminController : Controller
 
         typeViewModel.Editor = await _contentDefinitionDisplayManager.BuildTypeEditorAsync(typeViewModel.TypeDefinition, _updateModelAccessor.ModelUpdater);
         if (String.Equals(submit, "SaveAndClose"))
+        {
             return RedirectToAction(nameof(List));
+        }
         else if (String.Equals(submit, "Save"))
+        {
             await _notifier.SuccessAsync(H["Admin node updated successfully."]);
-
+        }
         return View(typeViewModel);
     }
 
